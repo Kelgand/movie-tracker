@@ -1,22 +1,58 @@
+body{
+	color: #FFFADE;
+	margin: 0px;
+}
+
 .container{
 	width: 800px;
-	background-color: lightgray;
+	background-color: #3A49D6;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+
+	h1{
+		font-size: 60px;
+		margin: 0px;
+	}
+	h4{
+		margin: 0px 0px 10px;
+	}
+}
+
+.utilities{
+	display: flex;
+	justify-content: space-around;
 }
 
 .movie{
 	box-sizing: border-box;
 	height: 50px;
+	margin-bottom: 3px;
 	padding: 10px;
+	border: 2px solid #49BEA1;
+	border-radius: 10px;
+	font-size: 24px;
+	display: flex;
+	justify-content: space-between;
+
+	&:nth-child(even){
+		background-color: #3440af;
+	}
+
+	&:hover{
+		border: 2px solid black;
+	}
 }
 
 .paginationContainer{
 	display: flex;
 	justify-content: center;
+	margin: 10px 0px;
 
 	.paginationLink{
 		width: 30px;
 		height: 30px;
-		border: 1px solid gray;
+		border: 1px solid #49BEA1;
 		border-radius: 10px;
 		margin: 0px 3px;
 
@@ -24,5 +60,34 @@
 
 		text-align: center;
 		line-height: 30px;
+
+		&:hover{
+			border: 1px solid black;
+		}
+	}
+}
+
+.loginModalFullscreen{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	background-color: #ccccccbb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.loginModalWindow{
+		padding: 15px;
+		background-color: #938BB7;
+		width: 200px;
+		height: 85px;
+		border-radius: 15px;
+		font-weight: bold;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
 	}
 }
