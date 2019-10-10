@@ -3,31 +3,10 @@ body{
 	margin: 0px;
 }
 
-.container{
-	width: 800px;
-	background-color: #3A49D6;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-
-	h1{
-		font-size: 60px;
-		margin: 0px;
-	}
-	h4{
-		margin: 0px 0px 10px;
-	}
-}
-
-.utilities{
-	display: flex;
-	justify-content: space-around;
-}
-
 .movie{
 	box-sizing: border-box;
-	height: 50px;
-	margin-bottom: 3px;
+	min-height: 50px;
+	margin: 0px 5px 3px 5px;
 	padding: 10px;
 	border: 2px solid #49BEA1;
 	border-radius: 10px;
@@ -47,7 +26,7 @@ body{
 .paginationContainer{
 	display: flex;
 	justify-content: center;
-	margin: 10px 0px;
+	padding: 10px 0px;
 
 	.paginationLink{
 		width: 30px;
@@ -89,5 +68,56 @@ body{
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
+	}
+}
+
+@media (min-width: 320px){
+	.container{
+		background-color: #3A49D6;
+		margin-left: auto;
+		margin-right: auto;
+		
+		header{
+			text-align: center;
+		}
+
+		h1{
+			font-size: 40px;
+			margin: 0px;
+		}
+		h4{
+			margin: 0px 0px 10px;
+		}
+	}
+
+	.utilities{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 80px;
+
+		.addNew{
+			#addNewMovie{
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+@media (min-width: 550px){
+	h1{
+		font-size: 60px;
+	}
+
+	.utilities{
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 840px){
+	.container{
+		width: 800px;
+		padding: 20px;
 	}
 }
